@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เข้าสู่ระบบ / สมัครสมาชิก — FITPULSE</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💓</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-pulse" viewBox="0 0 26 20"><path d="M0,10 L7,10 L9,4 L12,16 L14,7 L16,10 L26,10"/></svg>
+      FITPULSE <small>HEALTH &amp; TRAINING</small>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">หน้าแรก</a></li>
+      <li><a href="programs.html">โปรแกรม</a></li>
+      <li><a href="nutrition.html">โภชนาการ</a></li>
+      <li><a href="calculator.html">คำนวณสุขภาพ</a></li>
+      <li><a href="contact.html">ติดต่อเรา</a></li>
+      <li><a href="login.html" id="navAuthLink">เข้าสู่ระบบ</a></li>
+    </ul>
+    <a href="login.html" class="nav-cta" id="navCta">สมัครสมาชิก</a>
+    <button class="nav-toggle" aria-label="เปิดเมนู"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="auth-page">
+  <div class="container auth-layout">
+
+    <div class="auth-side">
+      <span class="eyebrow">สมาชิก FITPULSE</span>
+      <h1>ติดตามความคืบหน้าของคุณ<br>ในที่เดียว</h1>
+      <p class="lead">เข้าสู่ระบบเพื่อดูผลคำนวณ BMI โซนหัวใจ และเข้าถึงโปรแกรมที่บันทึกไว้ ได้ทุกครั้งที่กลับมา</p>
+      <div class="hero-monitor">
+        <div class="hero-monitor-head">
+          <span>MEMBER STATUS</span>
+          <span class="live">พร้อมเริ่มฝึก</span>
+        </div>
+        <svg viewBox="0 0 400 110" preserveAspectRatio="none">
+          <path class="ekg-line" d="M0,60 L60,60 L75,20 L90,95 L105,45 L120,60 L200,60 L215,20 L230,95 L245,45 L260,60 L340,60 L355,20 L370,95 L385,45 L400,60"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="auth-card">
+      <div class="calc-tabs" id="authTabs">
+        <button class="calc-tab active" data-panel="loginPanel">เข้าสู่ระบบ</button>
+        <button class="calc-tab" data-panel="registerPanel">สมัครสมาชิก</button>
+      </div>
+
+      <!-- ===== LOGIN ===== -->
+      <div class="calc-panel active" id="loginPanel">
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label for="loginEmail">อีเมล</label>
+            <input type="email" id="loginEmail" placeholder="you@email.com" required>
+          </div>
+          <div class="field">
+            <label for="loginPassword">รหัสผ่าน</label>
+            <input type="password" id="loginPassword" placeholder="••••••••" required>
+          </div>
+          <p class="field-error-msg" id="loginError" style="display:none;"></p>
+          <button type="submit" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
+        </form>
+        <p class="result-note">ยังไม่มีบัญชี? <a href="#" data-switch="registerPanel" style="color:var(--zone3)">สมัครสมาชิกที่นี่</a></p>
+      </div>
+
+      <!-- ===== REGISTER ===== -->
+      <div class="calc-panel" id="registerPanel">
+        <form id="registerForm" novalidate>
+          <div class="field">
+            <label for="regName">ชื่อ-นามสกุล</label>
+            <input type="text" id="regName" placeholder="ชื่อของคุณ" required>
+          </div>
+          <div class="field">
+            <label for="regEmail">อีเมล</label>
+            <input type="email" id="regEmail" placeholder="you@email.com" required>
+          </div>
+          <div class="field">
+            <label for="regPassword">รหัสผ่าน (อย่างน้อย 6 ตัวอักษร)</label>
+            <input type="password" id="regPassword" placeholder="••••••••" minlength="6" required>
+          </div>
+          <p class="field-error-msg" id="registerError" style="display:none;"></p>
+          <button type="submit" class="btn btn-primary btn-block">สร้างบัญชี</button>
+        </form>
+        <p class="result-note">มีบัญชีอยู่แล้ว? <a href="#" data-switch="loginPanel" style="color:var(--zone3)">เข้าสู่ระบบที่นี่</a></p>
+      </div>
+
+      <p class="result-note" style="margin-top:22px; text-align:center; opacity:0.7;">
+        ข้อมูลสมาชิกในเว็บนี้บันทึกไว้ในเบราว์เซอร์ของคุณเองเพื่อการสาธิต ไม่ได้ส่งขึ้นเซิร์ฟเวอร์ใดๆ
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:12px;">
+          <svg class="brand-pulse" viewBox="0 0 26 20"><path d="M0,10 L7,10 L9,4 L12,16 L14,7 L16,10 L26,10"/></svg>
+          FITPULSE
+        </a>
+        <p style="font-size:14px;">เว็บไซต์ออกกำลังกายเพื่อสุขภาพ ออกแบบโปรแกรมตามจังหวะหัวใจของคุณ เพื่อผลลัพธ์ที่ยั่งยืนกว่า</p>
+      </div>
+      <div>
+        <h4>เมนู</h4>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="programs.html">โปรแกรม</a></li>
+          <li><a href="nutrition.html">โภชนาการ</a></li>
+          <li><a href="calculator.html">คำนวณสุขภาพ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ช่วยเหลือ</h4>
+        <ul>
+          <li><a href="contact.html">ติดต่อเรา</a></li>
+          <li><a href="contact.html#faq">คำถามที่พบบ่อย</a></li>
+          <li><a href="login.html">เข้าสู่ระบบ / สมัครสมาชิก</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ติดตามเรา</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="TikTok">tt</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FITPULSE. โปรเจกต์เพื่อการศึกษา</span>
+      <span>ออกแบบด้วย ♥ ตามจังหวะหัวใจ</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

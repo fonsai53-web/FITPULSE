@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สมาชิกของฉัน — FITPULSE</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💓</text></svg>">
+<link rel="stylesheet" href="style.css">
+<script>
+  /* ---------- Session guard: กันหน้านี้ ต้องล็อกอินก่อนถึงจะเข้าดูได้ ---------- */
+  if (!localStorage.getItem('fitpulse_current_user')) {
+    window.location.href = 'login.html';
+  }
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-pulse" viewBox="0 0 26 20"><path d="M0,10 L7,10 L9,4 L12,16 L14,7 L16,10 L26,10"/></svg>
+      FITPULSE <small>HEALTH &amp; TRAINING</small>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">หน้าแรก</a></li>
+      <li><a href="programs.html">โปรแกรม</a></li>
+      <li><a href="nutrition.html">โภชนาการ</a></li>
+      <li><a href="calculator.html">คำนวณสุขภาพ</a></li>
+      <li><a href="contact.html">ติดต่อเรา</a></li>
+      <li><a href="login.html" id="navAuthLink">เข้าสู่ระบบ</a></li>
+    </ul>
+    <a href="login.html" class="nav-cta" id="navCta">สมัครสมาชิก</a>
+    <button class="nav-toggle" aria-label="เปิดเมนู"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="member-header">
+      <div>
+        <span class="eyebrow">แดชบอร์ดสมาชิก</span>
+        <h1 id="memberGreeting">สวัสดี</h1>
+        <div class="member-meta"><span id="memberJoined"></span> · <span id="memberEmail"></span></div>
+      </div>
+      <button class="btn btn-ghost" id="logoutBtn">ออกจากระบบ</button>
+    </div>
+    <p class="lead">นี่คือผลคำนวณล่าสุดของคุณ และทางลัดไปยังส่วนต่างๆ ของ FITPULSE</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="member-stats">
+      <div class="result-card" id="memberBmi">
+        <p class="result-empty">กำลังโหลด...</p>
+      </div>
+      <div class="result-card" id="memberHr">
+        <p class="result-empty">กำลังโหลด...</p>
+      </div>
+    </div>
+
+    <div class="quick-links">
+      <a href="programs.html" class="quick-link-card">
+        <div class="qicon">🏋️</div>
+        <h4>โปรแกรมออกกำลังกาย</h4>
+        <p>เลือกโปรแกรมตามโซนเป้าหมาย</p>
+      </a>
+      <a href="nutrition.html" class="quick-link-card">
+        <div class="qicon">🥗</div>
+        <h4>โภชนาการ</h4>
+        <p>เมนูอาหารและปริมาณน้ำที่ควรดื่ม</p>
+      </a>
+      <a href="calculator.html" class="quick-link-card">
+        <div class="qicon">📊</div>
+        <h4>คำนวณสุขภาพ</h4>
+        <p>อัปเดต BMI และโซนหัวใจใหม่</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:12px;">
+          <svg class="brand-pulse" viewBox="0 0 26 20"><path d="M0,10 L7,10 L9,4 L12,16 L14,7 L16,10 L26,10"/></svg>
+          FITPULSE
+        </a>
+        <p style="font-size:14px;">เว็บไซต์ออกกำลังกายเพื่อสุขภาพ ออกแบบโปรแกรมตามจังหวะหัวใจของคุณ เพื่อผลลัพธ์ที่ยั่งยืนกว่า</p>
+      </div>
+      <div>
+        <h4>เมนู</h4>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="programs.html">โปรแกรม</a></li>
+          <li><a href="nutrition.html">โภชนาการ</a></li>
+          <li><a href="calculator.html">คำนวณสุขภาพ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ช่วยเหลือ</h4>
+        <ul>
+          <li><a href="contact.html">ติดต่อเรา</a></li>
+          <li><a href="contact.html#faq">คำถามที่พบบ่อย</a></li>
+          <li><a href="login.html">เข้าสู่ระบบ / สมัครสมาชิก</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ติดตามเรา</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="TikTok">tt</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FITPULSE. โปรเจกต์เพื่อการศึกษา</span>
+      <span>ออกแบบด้วย ♥ ตามจังหวะหัวใจ</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

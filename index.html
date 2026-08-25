@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FITPULSE — ออกกำลังกายตามจังหวะหัวใจคุณ</title>
+<meta name="description" content="FITPULSE เว็บไซต์ออกกำลังกายเพื่อสุขภาพ โปรแกรมฝึก โภชนาการ และเครื่องคำนวณสุขภาพ ออกแบบตามโซนอัตราการเต้นหัวใจ">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💓</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============== HEADER ============== -->
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <svg class="brand-pulse" viewBox="0 0 26 20"><path d="M0,10 L7,10 L9,4 L12,16 L14,7 L16,10 L26,10"/></svg>
+      FITPULSE <small>HEALTH &amp; TRAINING</small>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">หน้าแรก</a></li>
+      <li><a href="programs.html">โปรแกรม</a></li>
+      <li><a href="nutrition.html">โภชนาการ</a></li>
+      <li><a href="calculator.html">คำนวณสุขภาพ</a></li>
+      <li><a href="contact.html">ติดต่อเรา</a></li>
+      <li><a href="login.html" id="navAuthLink">เข้าสู่ระบบ</a></li>
+    </ul>
+    <a href="login.html" class="nav-cta" id="navCta">สมัครสมาชิก</a>
+    <button class="nav-toggle" aria-label="เปิดเมนู"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">ออกแบบตามโซนหัวใจของคุณ</span>
+      <h1>ออกกำลังกาย <span class="accent">ตามจังหวะหัวใจ</span> ที่แท้จริงของคุณ</h1>
+      <p class="lead">ไม่ใช่ทุกคนที่ต้องฝึกหนักแบบเดียวกัน FITPULSE ช่วยให้คุณรู้ว่าตอนนี้ร่างกายอยู่โซนไหน แล้วออกแบบโปรแกรม โภชนาการ และการฟื้นตัวให้เหมาะกับคุณที่สุด</p>
+      <div class="hero-actions">
+        <a href="programs.html" class="btn btn-primary">เริ่มโปรแกรมแรก</a>
+        <a href="calculator.html" class="btn btn-ghost">คำนวณโซนหัวใจของฉัน</a>
+      </div>
+    </div>
+    <div class="hero-monitor">
+      <div class="hero-monitor-head">
+        <span>MONITOR</span>
+        <span class="live">กำลังฝึก · Zone 3</span>
+      </div>
+      <svg viewBox="0 0 400 110" preserveAspectRatio="none">
+        <path class="ekg-line" d="M0,60 L60,60 L75,20 L90,95 L105,45 L120,60 L200,60 L215,20 L230,95 L245,45 L260,60 L340,60 L355,20 L370,95 L385,45 L400,60"/>
+      </svg>
+      <div class="hero-bpm"><span class="num">142</span><span class="unit">bpm · เฉลี่ยวันนี้</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PULSE DIVIDER ============== -->
+<div class="pulse-divider">
+  <svg viewBox="0 0 1200 46" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="zoneGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#4A9EDE"/><stop offset="25%" stop-color="#4FC08D"/>
+        <stop offset="50%" stop-color="#F2B134"/><stop offset="75%" stop-color="#F2762E"/>
+        <stop offset="100%" stop-color="#E5484D"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,23 L70,23 L85,6 L100,42 L112,16 L124,23 L370,23 L385,6 L400,42 L412,16 L424,23 L670,23 L685,6 L700,42 L712,16 L724,23 L970,23 L985,6 L1000,42 L1012,16 L1024,23 L1200,23"/>
+  </svg>
+</div>
+
+<!-- ============== FEATURES ============== -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">ทำไมต้อง FITPULSE</span>
+      <h2>ฝึกอย่างมีหลักการ ไม่ใช่แค่ฝึกให้เหนื่อย</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
+        <h3>อิงหลักสรีรวิทยา</h3>
+        <p>ทุกโปรแกรมออกแบบตามโซนอัตราการเต้นหัวใจ เพื่อให้คุณฝึกได้ตรงเป้าหมาย ไม่มากไม่น้อยเกินไป</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+        <h3>โปรแกรมหลากหลาย</h3>
+        <p>ตั้งแต่วอร์มอัพเบาๆ ไปจนถึง HIIT สุดหนัก ครอบคลุมทุกเป้าหมายและทุกระดับความฟิต</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20" stroke-linecap="round"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>คำนวณผลได้จริง</h3>
+        <p>เครื่องมือคำนวณ BMI โซนหัวใจ และปริมาณน้ำที่ควรดื่ม ช่วยให้คุณติดตามความคืบหน้าได้ชัดเจน</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HEART ZONES ============== -->
+<section style="background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">พื้นฐานที่ทุกโปรแกรมยึดตาม</span>
+      <h2>5 โซนอัตราการเต้นหัวใจ</h2>
+      <p>เปอร์เซ็นต์เทียบกับอัตราการเต้นหัวใจสูงสุด (Max HR) — แตะที่การ์ดเพื่อดูตัวอย่างกิจกรรมและโปรแกรมที่แนะนำ สังเกตว่ายิ่งโซนสูง ท่าวิ่งในภาพจะยิ่งพุ่งและมีเส้นความเร็วมากขึ้น</p>
+    </div>
+    <div class="zone-cards reveal">
+
+      <div class="zone-card" style="--accent:var(--zone1); --accent-bg:rgba(74,158,222,0.14);" tabindex="0" role="button" aria-expanded="false">
+        <div class="zone-card-top">
+          <div class="zone-illustration">
+            <svg viewBox="0 0 64 64"><circle cx="32" cy="10" r="5"/><path d="M32,15 L31,30 M31,30 L25,48 M31,30 L37,46 M32,19 L26,26 M32,19 L38,25"/><path d="M6,30 L14,30"/></svg>
+          </div>
+          <div class="zone-card-title"><h3>Zone 1 · วอร์มอัพ</h3><span>ฟื้นตัว / เดินเบาๆ</span></div>
+          <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="zone-card-bar"><div class="zone-card-bar-fill" style="width:60%"></div></div>
+        <div class="zone-card-pct">50–60% ของ Max HR</div>
+        <div class="zone-card-detail">
+          <p>ความหนักต่ำสุด ใช้พูดคุยได้เป็นประโยคยาวๆ สบายๆ เหมาะเป็นช่วงวอร์มอัพก่อนฝึกหนัก หรือฟื้นตัวหลังฝึกหนักในวันถัดมา</p>
+          <div class="zone-examples"><span>เดินเร็ว</span><span>ยืดเหยียด</span><span>โยคะเบาๆ</span></div>
+          <a href="programs.html?filter=warmup" class="zone-link">ดูโปรแกรมในโซนนี้ →</a>
+        </div>
+      </div>
+
+      <div class="zone-card" style="--accent:var(--zone2); --accent-bg:rgba(79,192,141,0.14);" tabindex="0" role="button" aria-expanded="false">
+        <div class="zone-card-top">
+          <div class="zone-illustration">
+            <svg viewBox="0 0 64 64"><circle cx="30" cy="10" r="5"/><path d="M30,15 L27,31 M27,31 L18,48 M27,31 L36,44 L34,52 M30,19 L22,24 M30,19 L37,27"/><path d="M4,28 L12,28 M4,34 L12,34"/></svg>
+          </div>
+          <div class="zone-card-title"><h3>Zone 2 · เผาผลาญไขมัน</h3><span>จังหวะสบาย ต่อเนื่องได้นาน</span></div>
+          <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="zone-card-bar"><div class="zone-card-bar-fill" style="width:70%"></div></div>
+        <div class="zone-card-pct">60–70% ของ Max HR</div>
+        <div class="zone-card-detail">
+          <p>โซนที่ร่างกายใช้ไขมันเป็นพลังงานหลักได้อย่างมีประสิทธิภาพ ยังพูดเป็นประโยคสั้นๆ ได้ เหมาะทำบ่อยโดยไม่เหนื่อยล้าสะสม</p>
+          <div class="zone-examples"><span>ปั่นจักรยาน</span><span>เดินเร็วขึ้นเนิน</span><span>ว่ายน้ำช้าๆ</span></div>
+          <a href="programs.html?filter=cardio" class="zone-link">ดูโปรแกรมในโซนนี้ →</a>
+        </div>
+      </div>
+
+      <div class="zone-card" style="--accent:var(--zone3); --accent-bg:rgba(242,177,52,0.14);" tabindex="0" role="button" aria-expanded="false">
+        <div class="zone-card-top">
+          <div class="zone-illustration">
+            <svg viewBox="0 0 64 64"><circle cx="29" cy="10" r="5"/><path d="M29,15 L25,32 M25,32 L14,46 M25,32 L34,38 L31,50 M29,19 L20,22 M29,19 L36,29"/><path d="M2,26 L11,26 M2,32 L11,32 M2,38 L11,38"/></svg>
+          </div>
+          <div class="zone-card-title"><h3>Zone 3 · คาร์ดิโอ</h3><span>หายใจแรงขึ้น ยังคุยได้</span></div>
+          <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="zone-card-bar"><div class="zone-card-bar-fill" style="width:80%"></div></div>
+        <div class="zone-card-pct">70–80% ของ Max HR</div>
+        <div class="zone-card-detail">
+          <p>ความหนักปานกลาง-สูง พูดได้แค่ประโยคสั้นๆ ช่วยเสริมความอึดของหัวใจและปอดได้ดี เป็นโซนหลักของการฝึกคาร์ดิโอทั่วไป</p>
+          <div class="zone-examples"><span>วิ่งเหยาะ</span><span>ปั่นจักรยานเร็ว</span><span>เต้นแอโรบิก</span></div>
+          <a href="programs.html?filter=cardio" class="zone-link">ดูโปรแกรมในโซนนี้ →</a>
+        </div>
+      </div>
+
+      <div class="zone-card" style="--accent:var(--zone4); --accent-bg:rgba(242,118,46,0.14);" tabindex="0" role="button" aria-expanded="false">
+        <div class="zone-card-top">
+          <div class="zone-illustration">
+            <svg viewBox="0 0 64 64"><circle cx="27" cy="10" r="5"/><path d="M27,15 L22,33 M22,33 L10,42 M22,33 L32,32 L27,48 M27,19 L17,18 M27,19 L34,26"/><path d="M0,24 L9,24 M0,29 L9,29 M0,34 L9,34 M0,39 L9,39"/></svg>
+          </div>
+          <div class="zone-card-title"><h3>Zone 4 · หนักหน่วง</h3><span>เหนื่อย พูดได้แค่คำสั้นๆ</span></div>
+          <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="zone-card-bar"><div class="zone-card-bar-fill" style="width:90%"></div></div>
+        <div class="zone-card-pct">80–90% ของ Max HR</div>
+        <div class="zone-card-detail">
+          <p>ความหนักสูง ใช้พลังงานจากคาร์โบไฮเดรตเป็นหลัก ช่วยเพิ่มความแข็งแรงและอัตราเผาผลาญ ไม่เหมาะฝึกติดต่อกันนานในโซนนี้</p>
+          <div class="zone-examples"><span>เวทเทรนนิ่ง</span><span>วิ่งขึ้นเขา</span><span>คอร์เทรนนิ่งหนัก</span></div>
+          <a href="programs.html?filter=strength" class="zone-link">ดูโปรแกรมในโซนนี้ →</a>
+        </div>
+      </div>
+
+      <div class="zone-card" style="--accent:var(--zone5); --accent-bg:rgba(229,72,77,0.14);" tabindex="0" role="button" aria-expanded="false">
+        <div class="zone-card-top">
+          <div class="zone-illustration">
+            <svg viewBox="0 0 64 64"><circle cx="25" cy="10" r="5"/><path d="M25,15 L18,34 M18,34 L6,38 M18,34 L29,26 L22,46 M25,19 L13,14 M25,19 L31,24"/><path d="M0,20 L9,20 M0,25 L9,25 M0,30 L9,30 M0,35 L9,35 M0,40 L9,40"/></svg>
+          </div>
+          <div class="zone-card-title"><h3>Zone 5 · จุดสูงสุด</h3><span>ออกแรงสุดกำลัง</span></div>
+          <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="zone-card-bar"><div class="zone-card-bar-fill" style="width:100%"></div></div>
+        <div class="zone-card-pct">90–100% ของ Max HR</div>
+        <div class="zone-card-detail">
+          <p>ความหนักสูงสุด พูดแทบไม่ได้ ใช้ได้แค่ช่วงสั้นๆ ไม่กี่สิบวินาที เหมาะกับ HIIT หรือสปรินต์ ไม่เหมาะสำหรับผู้เริ่มต้นหรือมีปัญหาหัวใจ</p>
+          <div class="zone-examples"><span>สปรินต์</span><span>HIIT</span><span>ยกน้ำหนักสูงสุด</span></div>
+          <a href="programs.html?filter=hiit" class="zone-link">ดูโปรแกรมในโซนนี้ →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== TIP OF THE DAY ============== -->
+<section>
+  <div class="container">
+    <div class="tip-box reveal">
+      <div class="tip-icon">💡</div>
+      <div>
+        <span class="tip-label">เคล็ดลับวันนี้</span>
+        <p id="tipText">กำลังโหลดเคล็ดลับ...</p>
+      </div>
+      <button class="tip-refresh" id="tipRefresh" aria-label="สุ่มเคล็ดลับใหม่">↻</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CTA ============== -->
+<div class="cta-band">
+  <div class="container">
+    <h2 class="reveal">พร้อมเริ่มต้นวันนี้หรือยัง?</h2>
+    <p class="reveal">สมัครสมาชิกฟรี รับโปรแกรมออกกำลังกายที่ออกแบบมาสำหรับคุณโดยเฉพาะ</p>
+    <a href="contact.html" class="btn btn-primary reveal">สมัครสมาชิกฟรี</a>
+  </div>
+</div>
+
+<!-- ============== FOOTER ============== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:12px;">
+          <svg class="brand-pulse" viewBox="0 0 26 20"><path d="M0,10 L7,10 L9,4 L12,16 L14,7 L16,10 L26,10"/></svg>
+          FITPULSE
+        </a>
+        <p style="font-size:14px;">เว็บไซต์ออกกำลังกายเพื่อสุขภาพ ออกแบบโปรแกรมตามจังหวะหัวใจของคุณ เพื่อผลลัพธ์ที่ยั่งยืนกว่า</p>
+      </div>
+      <div>
+        <h4>เมนู</h4>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="programs.html">โปรแกรม</a></li>
+          <li><a href="nutrition.html">โภชนาการ</a></li>
+          <li><a href="calculator.html">คำนวณสุขภาพ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ช่วยเหลือ</h4>
+        <ul>
+          <li><a href="contact.html">ติดต่อเรา</a></li>
+          <li><a href="contact.html#faq">คำถามที่พบบ่อย</a></li>
+          <li><a href="login.html">เข้าสู่ระบบ / สมัครสมาชิก</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>ติดตามเรา</h4>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="TikTok">tt</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FITPULSE. โปรเจกต์เพื่อการศึกษา</span>
+      <span>ออกแบบด้วย ♥ ตามจังหวะหัวใจ</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
